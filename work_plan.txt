@@ -1,0 +1,18 @@
+Chess game to be played on the terminal will be Object Oriented and coded in C++. 
+
+First requirements of the game is for the game to work, without any artifical intelligence. 
+Inputs will be given in the terminal similar to that of the professionals, like so: "Hf6" or "PxD5". 
+
+Further relevant information to the project should be added here as well as the overall "gameplan",
+i.e. a more extensive plan as to how the program works. 
+
+----------------------------------------------------------------------------------------------------------
+
+main.cpp ~~> creates a board object and takes in continuous functions. *ends maybe when board.cpp returns a 1 or something similar*
+board.cpp ~~> board class. 
+	board.h ~~> defines the board class. the board class is to have 12 objects and 32 "smart pointers".
+pieces.cpp ~~> there are 7 classes declared in this file.
+	pieces.h ~~> of the 7 classes, there should be a arbitrary "piece" class defined. the rest of the classes are as follows: Pawn, Rook, Horse(to avoid confusion between King and Knight), Bishop, King, Queen.
+		     the 6 specific piece classes should inherit from the arbitrary "piece" class so that the "smart pointer" can be of one type and point to them all.
+		     
+  

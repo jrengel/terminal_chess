@@ -1,0 +1,74 @@
+#include <board.h>
+
+class Board
+{
+public:
+	Board();
+	void start_game();	
+
+private:
+	//Player names
+	std::string white_player, black_player;
+
+	//Latest move
+	std::string latest_move;
+	//Black pieces are noted by a "b" at the end
+	Pawn pawn;
+	Rook rook;
+	Horse horse;
+	Bishop bishop;
+	Queen queen;
+	King king;
+
+	//Pointers for white objects
+	Pawn* pointer_pw1 = &pawn;
+	Pawn* pointer_pw2 = &pawn;
+	Pawn* pointer_pw3 = &pawn;
+	Pawn* pointer_pw4 = &pawn;
+	Pawn* pointer_pw5 = &pawn;
+	Pawn* pointer_pw6 = &pawn;
+	Pawn* pointer_pw7 = &pawn;
+	Pawn* pointer_pw8 = &pawn;
+	Rook* pointer_rw1 = &rook;
+	Rook* pointer_rw2 = &rook;
+	Horse* pointer_hw1 = &horse;
+	Horse* pointer_hw2 = &horse;
+	Bishop* pointer_bw1 = &bishop;
+	Bishop* pointer_bw2 = &bishop;
+	King* pointer_kw = &king;
+	Queen* pointer_qw = &queen;
+
+	//Pointers for black objects
+	Pawn* pointer_pb1 = &pawn;
+	Pawn* pointer_pb2 = &pawn;
+	Pawn* pointer_pb3 = &pawn;
+	Pawn* pointer_pb4 = &pawn;
+	Pawn* pointer_pb5 = &pawn;
+	Pawn* pointer_pb6 = &pawn;
+	Pawn* pointer_pb7 = &pawn;
+	Pawn* pointer_pb8 = &pawn;
+	Rook* pointer_rb1 = &rook;
+	Rook* pointer_rb2 = &rook;
+	Horse* pointer_hb1 = &horse;
+	Horse* pointer_hb2 = &horse;
+	Bishop* pointer_bb1 = &bishop;
+	Bishop* pointer_bb2 = &bishop;
+	King* pointer_kb = &king;
+	Queen* pointer_qb = &queen;
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
