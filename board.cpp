@@ -4,24 +4,27 @@ class Board
 {
 public:
 	Board();
+	void notation_help();
 	void start_game();	
 
 private:
 	//Player names
 	std::string white_player, black_player;
 
-	//Latest move
+	//Latest move & who's current move
 	std::string latest_move;
+	std::string whose_turn = "White";
+
 	//Black pieces are noted by a "b" at the end
 	Pawn pawn;
-	Rook rook;
+/*	Rook rook;
 	Horse horse;
 	Bishop bishop;
 	Queen queen;
 	King king;
-
+*/
 	//Pointers for white objects
-	Pawn* pointer_pw1 = &pawn;
+/*	Pawn* pointer_pw1 = &pawn;
 	Pawn* pointer_pw2 = &pawn;
 	Pawn* pointer_pw3 = &pawn;
 	Pawn* pointer_pw4 = &pawn;
@@ -37,9 +40,9 @@ private:
 	Bishop* pointer_bw2 = &bishop;
 	King* pointer_kw = &king;
 	Queen* pointer_qw = &queen;
-
+*/
 	//Pointers for black objects
-	Pawn* pointer_pb1 = &pawn;
+/*	Pawn* pointer_pb1 = &pawn;
 	Pawn* pointer_pb2 = &pawn;
 	Pawn* pointer_pb3 = &pawn;
 	Pawn* pointer_pb4 = &pawn;
@@ -55,20 +58,7 @@ private:
 	Bishop* pointer_bb2 = &bishop;
 	King* pointer_kb = &king;
 	Queen* pointer_qb = &queen;
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+*/
+	//An 8x8 array of pointers that point to the parent class "Piece"
+	Piece* board[8][8];	
+}	
