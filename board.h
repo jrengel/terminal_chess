@@ -3,8 +3,7 @@
 
 Board::Board()
 {
-	//Initialize positions for Piece Pointers - a better way to do this would be helpful.
-	Piece *board[1][1] =  
+	
 }
 
 void Board::notation_help()
@@ -23,9 +22,23 @@ void Board::start_game()
 	if(latest_move == "help")
 	{
 		notation_help();
+		show_board();
 		std::cout << whose_turn << " to move!: "
-	} else {
-		
-		
-	} 
+	}
+}
+
+void Board::show_board()
+{
+	//Column Header Print
+	std::cout << "A   B   C   D   E   F   G   H\n";
+	for (j=0; j < 8; j++)
+	{
+		for (i=0; i < 8; i++)
+		{
+			std::cout << board[i][j]->showPiece(); << "   ";
+		}
+	std::cout << i+1 << "\n";
+`	}
 	
+	
+		
