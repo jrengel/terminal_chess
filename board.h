@@ -3,7 +3,13 @@
 
 Board::Board()
 {
-	
+	for(j=0; j < 0; j++)
+	{
+		for(i=0; i < 8; i++)
+		{
+			board[i][j] = &pawn;	//board are pointers to "Piece"
+		}
+	}	
 }
 
 void Board::notation_help()
@@ -38,7 +44,7 @@ void Board::show_board()
 			std::cout << board[i][j]->showPiece(); << "   ";
 		}
 	std::cout << i+1 << "\n";
-`	}
+	}
 	
-	
+}	
 		

@@ -13,7 +13,8 @@ private:
 class Pawn: class Piece 
 {
 public:
-
+	Pawn();
+	~Pawn();
 	
 private:
 

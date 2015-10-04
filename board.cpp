@@ -15,7 +15,7 @@ private:
 	std::string white_player, black_player;
 
 	//Latest move & who's current move
-	std::string latest_move;
+	std::string latest_move = "White";
 	std::string whose_turn = "White";
 
 	//Black pieces are noted by a "b" at the end
@@ -27,8 +27,8 @@ private:
 	King king;
 */
 	//Pointers for white objects
-	Pawn* pointer_pw1 = &pawn;
-/*	Pawn* pointer_pw2 = &pawn;
+/*	Pawn* pointer_pw1 = &pawn;
+	Pawn* pointer_pw2 = &pawn;
 	Pawn* pointer_pw3 = &pawn;
 	Pawn* pointer_pw4 = &pawn;
 	Pawn* pointer_pw5 = &pawn;
