@@ -1,67 +1,60 @@
-#include <board.h>
+#include <iostream>
+#include <string>
+#include "board.h"
 
-class Board
+Board::Board()
 {
-public:
-	Board();
-	void notation_help();
-	void start_game();	
+	board[1][1] = &pawn;
+/*	for(int j=0; j < 0; j++)
+	{
+		for(int i=0; i < 8; i++)
+		{
+			board[i][j] = &pawn;	//board are pointers to "Piece"
+		}
+	}
+*/	
+}
 
-private:
-	//Function that displays the current board
-	void show_board();
-
-	//Player names
-	std::string white_player, black_player;
-
-	//Latest move & who's current move
-	std::string latest_move = "White";
-	std::string whose_turn = "White";
-
-	//Black pieces are noted by a "b" at the end
-	Pawn pawn;
-/*	Rook rook;
-	Horse horse;
-	Bishop bishop;
-	Queen queen;
-	King king;
+void Board::notation_help()
+{
+	std::cout << "Chess notation reminder!\n";
+	std::cout << "P for Pawn, K for King, Q for Queen, R for Rook, B for Bishop and H for Knight.\n";
+	std::cout << "To make a move, enter move in form [Piece Letter][Starting Position Algebraic Notation][Ending Position Algebraic Notation]\n";
+	std::cout << "Some examples would be: 'Pa2a4' / 'Hb8c6' / 'Kd5e5'\n"; 	
+	std::cout << "For Kingside castling, simply type '0-0' and for Queenside castling, '0-0-0'\n";
+}
+void Board::start_game()
+{
+/*	//Ask for input of first move. 
+	std::cout << whose_turn << " to move!: ";
+	std::cin >> latest_move;
+	if(latest_move == "help")
+	{
+		notation_help();
+		show_board();
+		std::cout << whose_turn << " to move!: "
+	}
 */
-	//Pointers for white objects
-/*	Pawn* pointer_pw1 = &pawn;
-	Pawn* pointer_pw2 = &pawn;
-	Pawn* pointer_pw3 = &pawn;
-	Pawn* pointer_pw4 = &pawn;
-	Pawn* pointer_pw5 = &pawn;
-	Pawn* pointer_pw6 = &pawn;
-	Pawn* pointer_pw7 = &pawn;
-	Pawn* pointer_pw8 = &pawn;
-	Rook* pointer_rw1 = &rook;
-	Rook* pointer_rw2 = &rook;
-	Horse* pointer_hw1 = &horse;
-	Horse* pointer_hw2 = &horse;
-	Bishop* pointer_bw1 = &bishop;
-	Bishop* pointer_bw2 = &bishop;
-	King* pointer_kw = &king;
-	Queen* pointer_qw = &queen;
+}
 
-	//Pointers for black objects
-	Pawn* pointer_pb1 = &pawn;
-	Pawn* pointer_pb2 = &pawn;
-	Pawn* pointer_pb3 = &pawn;
-	Pawn* pointer_pb4 = &pawn;
-	Pawn* pointer_pb5 = &pawn;
-	Pawn* pointer_pb6 = &pawn;
-	Pawn* pointer_pb7 = &pawn;
-	Pawn* pointer_pb8 = &pawn;
-	Rook* pointer_rb1 = &rook;
-	Rook* pointer_rb2 = &rook;
-	Horse* pointer_hb1 = &horse;
-	Horse* pointer_hb2 = &horse;
-	Bishop* pointer_bb1 = &bishop;
-	Bishop* pointer_bb2 = &bishop;
-	King* pointer_kb = &king;
-	Queen* pointer_qb = &queen;
-*/
-	//An 8x8 array of pointers that point to the parent class "Piece"
-	Piece* board[8][8];	//Simple 1x8 array to start off simple
+void Board::show_board()
+{
+	//Column Header Print
+	std::cout << "A   B   C   D   E   F   G   H\n";
+	int k = 0;
+	for (int j=0; j > 8; j++)
+	{
+		for (int i=0; i > 8; i++)
+		{
+			std::cout << board[i][j]->showPiece() << "   ";
+		}
+	std::cout << k+1 << "\n";
+	}
+	
 }	
+
+void Board::show_piece()
+{
+	std::cout << board[1][1]->showPiece() << std::endl;
+}
+		

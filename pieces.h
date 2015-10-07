@@ -1,34 +1,24 @@
 #ifndef PIECES_H_
 #define PIECES_H_
-#include <iostream>
 
-Piece::Piece()
+class Piece
 {
-	std::cout << "Applying PIECE() constructor!\n";
-	piece_symbol = '~';
-}
+public:
+	Piece();
+	char showPiece();	//Returns the char character that represents the piece	
+	char piece_symbol;		//A tilde means "blank space"
+private:
+};
 
-char Piece::showPiece()
+class Pawn: public Piece 
 {
-	return piece_symbol;
-}
-
-Pawn::Pawn()
-{
-	std::cout << "Applying PAWN() Constructor!" << std::endl;
-	piece_symbol = 'P';
-}
-
-Pawn::~Pawn()
-{
-	std::cout << "Applying ~PAWN() Destructor!" << std::endl;
-}
-#endif 
+public:
+	Pawn();
+	~Pawn();
+	
+private:
 
 
-
-
-
-
+};
 
 #endif

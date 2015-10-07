@@ -1,24 +1,24 @@
+#include <iostream>
 #include "pieces.h"
 
-class Piece
+Piece::Piece()
 {
-public:
-	Piece();
-	void showPiece();	//Returns the char character that represents the piece	
-				//A tilde means "blank space"
-private:
-	char piece_symbol;
+	std::cout << "Applying PIECE() constructor!\n";
+	piece_symbol = '~';
 }
 
-class Pawn: class Piece 
+char Piece::showPiece()
 {
-public:
-	Pawn();
-	~Pawn();
-	
-private:
-
-
+	return piece_symbol;
 }
 
+Pawn::Pawn()
+{
+	std::cout << "Applying PAWN() Constructor!" << std::endl;
+	piece_symbol = 'P';
+}
 
+Pawn::~Pawn()
+{
+	std::cout << "Applying ~PAWN() Destructor!" << std::endl;
+}

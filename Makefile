@@ -1,4 +1,4 @@
-game: main.o board.o piece.o
+game: main.o board.o pieces.o
 	g++ main.o board.o pieces.o -o game
 	
 main: main.cpp 
@@ -14,4 +14,4 @@ test:
 	./game
 
 clean:
-	rm -f *.o 
+	rm -f *.o game 
