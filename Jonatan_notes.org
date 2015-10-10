@@ -1,0 +1,62 @@
+#+TITLE: Ideas to the terminal chess
+#+AUTHOR: Jonatan Rengel
+#+DATE: 10-10-2015
+
+Hi! Here are some notes/(questions you should respond yourself) that might help regarding your project Senor!
+I have checked your work plan and your code and here I am dropping some ideas. 
+Maybe I can collaborate coding later on, first lets the main ideas to get settled
+Note: Forgive my bad englando no hablo ingles ;)
+
+* List of notes/ideas/doubts
+- Yes, you need to define some plan, I would suggest you start by a design.
+  Just use some paper to try to define the relationships between the classes (for example).
+  Regarding the design here there are some questions you might need to answer beforehand:
+  + How are you going to display the board? I mean I can guess the game is going to be played
+    only between two players right? Those are important part of the game!
+    You can use a matrix that represents the board, now if you have a class board, it needs this
+    matrix as attribute!, the board changes every time the user input a new value, so yes it would
+    need to be updated. Let me reformul the prior question:
+    Do you want to display the whole table? only the last movement? just codes of movements? 
+    Up to you( but thing in the user, he needs to know the state of the game so he can do his next movement)
+  + What does the board matrix contain? Well this is easy, it contain pieces, you have to think how are 
+    you going to create them though, and most important how are they going to change(remember that
+    the movements depend on the players, maybe you need something else (a class/struct -cough cough-) to represent
+    those movements so the board can tell the pieces to move! and it would need a new position for that piece
+    to update de board status.    
+    #+BEGIN_EXAMPLE
+    position = pawn.move(movementObject); // pawn or any other piece
+    updateboard(position)
+    #+END_EXAMPLE
+
+- I like the idea of use inheritance for the pieces (I guess its the right aproach in OOP), here you might need to think
+  how to difference the pieces (not only from the type, the color is important as well right?), 
+  use something on the generic "father" class. 
+  Then every piece has different movements, you might need to override this behaviour/function.
+
+- Think about the flow of the game. What happens first? User insert data, this data goes to board? then to piece?
+  through movements and positions? I can imagine you have an idea in your mind how it supose to look at the end try
+  to make a design of that idea.
+
+- Chess has rules!, you need to check if the rules are met, Can I move this piece here? is there another piece there already?
+  which color is it? which type is it? what happen to that piece if the new piece takes that position?
+  When does the game start? What is the initial state of the board? When does the game finish? who won?
+
+- Tools are also important, I saw you are trying to do Makefile file, sounds good, it might helpd to save some time in the long term.
+  You should also try to learn about how to debug your code.
+
+
+* Final notes
+I like that you are trying to do this by yourself, you need to plasm your ideas into a design though, you can not just code
+hoping it would goes okey, you might face problems you can not change and you have to re do the whole work, don't rush into the code,
+once you have your design you can start doing some minor tweaks. There is a reason for that those who design software earn more money than
+us, simple coders, because it is not easy, experience is a huge factor.
+Good luck and if you have an idea you are not sure about it I can give my opinion on it.
+
+June's neat tan
+
+
+* About this file
+I have used org mode from emacs to write these notes so I can remeber a bit about how to use it 
+(its been a while). 
+
+
