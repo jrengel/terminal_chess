@@ -1,0 +1,17 @@
+
+
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+CMakeFiles/
+.vscode/
+cmake_install.cmake
+CMakeCache.txt
+CMakeLists.txt
+Makefile
